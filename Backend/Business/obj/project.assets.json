@@ -3758,11 +3758,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Job-Project\\Backend\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "F:\\Job-Project\\Backend\\Business\\Business.csproj",
+      "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\Shtef\\.nuget\\packages\\",
-      "outputPath": "F:\\Job-Project\\Backend\\Business\\obj\\",
+      "outputPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Shtef\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3779,8 +3779,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\Job-Project\\Backend\\Data\\Data.csproj": {
-              "projectPath": "F:\\Job-Project\\Backend\\Data\\Data.csproj"
+            "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj": {
+              "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj"
             }
           }
         }

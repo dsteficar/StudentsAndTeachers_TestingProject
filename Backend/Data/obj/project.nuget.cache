@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MQjdesRMxqI7FKArpsj+dnRmy3J6cGLfiPg61Ik7ik32yd+iS50edlZgRXh+ugObqAmgxg/4wMbeQE0z3CvtlA==",
+  "dgSpecHash": "VU0TuNQg/va3oPqbUdNdPuZ0fDdEpAk85ZuyyHFECeCmAwNXDGHoltKFMxBlWg3SipCil0f5eF1r7I1G3uEqdA==",
   "success": true,
-  "projectFilePath": "F:\\Job-Project\\Backend\\Data\\Data.csproj",
+  "projectFilePath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Shtef\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Shtef\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

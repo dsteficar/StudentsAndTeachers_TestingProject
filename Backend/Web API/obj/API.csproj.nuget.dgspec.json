@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Job-Project\\Backend\\Web API\\API.csproj": {}
+    "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Web API\\API.csproj": {}
   },
   "projects": {
-    "F:\\Job-Project\\Backend\\Business\\Business.csproj": {
+    "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Job-Project\\Backend\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "F:\\Job-Project\\Backend\\Business\\Business.csproj",
+        "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\Shtef\\.nuget\\packages\\",
-        "outputPath": "F:\\Job-Project\\Backend\\Business\\obj\\",
+        "outputPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Shtef\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\Job-Project\\Backend\\Data\\Data.csproj": {
-                "projectPath": "F:\\Job-Project\\Backend\\Data\\Data.csproj"
+              "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj": {
+                "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj"
               }
             }
           }
@@ -91,14 +91,14 @@
         }
       }
     },
-    "F:\\Job-Project\\Backend\\Data\\Data.csproj": {
+    "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Job-Project\\Backend\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "F:\\Job-Project\\Backend\\Data\\Data.csproj",
+        "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\Shtef\\.nuget\\packages\\",
-        "outputPath": "F:\\Job-Project\\Backend\\Data\\obj\\",
+        "outputPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Shtef\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -174,14 +174,14 @@
         }
       }
     },
-    "F:\\Job-Project\\Backend\\Web API\\API.csproj": {
+    "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Web API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Job-Project\\Backend\\Web API\\API.csproj",
+        "projectUniqueName": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Web API\\API.csproj",
         "projectName": "API",
-        "projectPath": "F:\\Job-Project\\Backend\\Web API\\API.csproj",
+        "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Web API\\API.csproj",
         "packagesPath": "C:\\Users\\Shtef\\.nuget\\packages\\",
-        "outputPath": "F:\\Job-Project\\Backend\\Web API\\obj\\",
+        "outputPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Web API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Shtef\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -198,11 +198,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\Job-Project\\Backend\\Business\\Business.csproj": {
-                "projectPath": "F:\\Job-Project\\Backend\\Business\\Business.csproj"
+              "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\Business.csproj": {
+                "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\Business.csproj"
               },
-              "F:\\Job-Project\\Backend\\Data\\Data.csproj": {
-                "projectPath": "F:\\Job-Project\\Backend\\Data\\Data.csproj"
+              "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj": {
+                "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj"
               }
             }
           }

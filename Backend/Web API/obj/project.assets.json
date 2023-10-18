@@ -10995,11 +10995,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Job-Project\\Backend\\Web API\\API.csproj",
+      "projectUniqueName": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Web API\\API.csproj",
       "projectName": "API",
-      "projectPath": "F:\\Job-Project\\Backend\\Web API\\API.csproj",
+      "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Web API\\API.csproj",
       "packagesPath": "C:\\Users\\Shtef\\.nuget\\packages\\",
-      "outputPath": "F:\\Job-Project\\Backend\\Web API\\obj\\",
+      "outputPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Web API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Shtef\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11016,11 +11016,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\Job-Project\\Backend\\Business\\Business.csproj": {
-              "projectPath": "F:\\Job-Project\\Backend\\Business\\Business.csproj"
+            "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\Business.csproj": {
+              "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Business\\Business.csproj"
             },
-            "F:\\Job-Project\\Backend\\Data\\Data.csproj": {
-              "projectPath": "F:\\Job-Project\\Backend\\Data\\Data.csproj"
+            "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj": {
+              "projectPath": "C:\\GitHub\\Job-Project\\StudentsAndTeachers_TestingProject\\Backend\\Data\\Data.csproj"
             }
           }
         }
