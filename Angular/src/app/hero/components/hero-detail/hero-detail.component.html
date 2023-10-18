@@ -1,0 +1,20 @@
+<div *ngIf="hero">
+  <div class="hero-details-container">
+  <mat-card>
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <div class="hero-details-id"><span>Hero ID: </span>{{hero.id}}</div>
+    <div>
+      <form ngNoForm>
+        <mat-form-field class="hero-name-field">
+          <mat-label>Hero name: </mat-label>
+          <input placeholder="Hero name" id="hero-name" matInput [(ngModel)]="hero.name"/>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="button" (click)="save()">save</button> 
+        <button mat-raised-button color="primary" type="button" (click)="goBack()">go back</button>
+      </form>
+    </div>
+  </mat-card>
+</div>
+</div>
+
+

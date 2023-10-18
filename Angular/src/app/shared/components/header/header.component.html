@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <mat-icon>home</mat-icon>
+        <span class="project-title">{{title}}</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<nav mat-tab-nav-bar [backgroundColor]="background" [tabPanel]="tabPanel">
+    <span class="nav-spacer"></span>
+    <a mat-tab-link routerLink="/dashboard">Dashboard</a>
+    <span class="nav-spacer"></span>
+    <a mat-tab-link routerLink="/heroes">Heroes</a>
+    <span class="nav-spacer"></span>
+    <a mat-tab-link routerLink="/users">Users</a>
+    <span class="nav-spacer"></span>
+    <a mat-tab-link routerLink="/students">Students</a>
+    <span class="nav-spacer"></span>
+    <a mat-tab-link routerLink="/teachers">Teachers</a>
+    <span class="nav-spacer"></span>
+    <a mat-tab-link routerLink="/school-classes">School classes</a>
+    <span class="nav-spacer"></span>
+    <a mat-tab-link routerLink="/contact-infos">Contact infos</a>
+    <span class="nav-spacer"></span>
+    <a mat-tab-link routerLink="/student-teachers">Student teachers</a>
+    <span class="nav-spacer"></span>
+</nav>
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>

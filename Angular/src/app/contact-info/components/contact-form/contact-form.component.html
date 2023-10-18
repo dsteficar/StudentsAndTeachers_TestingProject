@@ -1,0 +1,74 @@
+<div class="contact-info-form-container">
+    <mat-dialog-content>
+        <header>{{editContactInfo ? 'Edit entry' : 'Add entry'}}</header>
+        <form [formGroup]="registeredForm">
+            <!--ID-->
+            <mat-form-field id="contact-info-id-input" class="user-input-field">
+                <input matInput class="form-control" formControlName="id">
+            </mat-form-field>
+            <!--Address-->
+            <mat-form-field class="contact-info-input-field">
+                <mat-label>Address</mat-label>
+                <input matInput class="form-control" formControlName="address" placeholder="Address...">
+            </mat-form-field>
+            <!--Email-->
+            <mat-form-field class="contact-info-input-field">
+                <mat-label>Email</mat-label>
+                <input matInput class="form-control" formControlName="email" placeholder="Email...">
+                <mat-error *ngIf="errorHandling('email', 'required')">
+                    You must provide an <strong>email</strong>
+                </mat-error>
+                <mat-error *ngIf="errorHandling('email', 'email')">
+                    You must provide a <strong>valid email</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Website link-->
+            <mat-form-field class="contact-info-input-field">
+                <mat-label>Website link</mat-label>
+                <input matInput class="form-control" formControlName="websiteLink" placeholder="Website link...">
+            </mat-form-field>
+            <!--Contact number-->
+            <mat-form-field class="contact-info-input-field">
+                <mat-label>Contact number</mat-label>
+                <input matInput class="form-control" formControlName="contactNumber" placeholder="Contact number...">
+                <mat-error *ngIf="errorHandling('contactNumber', 'required')">
+                    You must provide a <strong>contact number</strong>
+                </mat-error>
+                <mat-error *ngIf="errorHandling('contactNumber', 'validatedNumber')">
+                    Contact number must contain <strong>only digits</strong>
+                </mat-error>
+                <mat-error
+                    *ngIf="errorHandling('contactNumber', 'maxlength') || errorHandling('contactNumber', 'minlength')">
+                    Contact number must contain exactly <strong>nine digits</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Cabinet number-->
+            <mat-form-field class="contact-info-input-field">
+                <mat-label>Cabinet number</mat-label>
+                <input matInput class="form-control" formControlName="cabinetNumber" placeholder="Cabinet number...">
+                <mat-error *ngIf="errorHandling('cabinetNumber', 'validatedNumber')">
+                    Cabinet number must contain <strong>only digits</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Teachers-->
+            <mat-form-field class="contact-info-input-field" appearance="fill">
+                <mat-label>Teacher</mat-label>
+                <mat-select class="form-control" formControlName="teachers" name="teacherID">
+                    <mat-option *ngFor="let teacher of teachers" [value]="teacher.id">
+                        {{teacher.name + " " + teacher.surname}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="contact-info-btn-container">
+                <ng-container *ngIf="editContactInfo; else addBtn">
+                    <button mat-raised-button class="edit-student-btn" color="primary" type="button"
+                        [disabled]="!registeredForm.valid" (click)="onSubmit(false)">Edit</button>
+                </ng-container>
+                <ng-template #addBtn>
+                    <button mat-raised-button class="add-student-btn" color="primary" type="button"
+                        [disabled]="!registeredForm.valid" (click)="onSubmit(true)">Add</button>
+                </ng-template>
+            </div>
+        </form>
+    </mat-dialog-content>
+</div>

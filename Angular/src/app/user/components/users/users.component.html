@@ -1,0 +1,34 @@
+<div class="new-userbtn-container">
+  <button mat-raised-button color="primary" type="button" (click)="openAddDialog()">Add new entry</button>
+</div>
+<div class="users-table-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="fullName">
+      <th mat-header-cell *matHeaderCellDef> Full name </th>
+      <td mat-cell *matCellDef="let user"> {{user.fullName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="number">
+      <th mat-header-cell *matHeaderCellDef> Number </th>
+      <td mat-cell *matCellDef="let user"> {{user.number}} </td>
+    </ng-container>
+    <ng-container matColumnDef="dateOfBirth">
+      <th mat-header-cell *matHeaderCellDef> Date of birth </th>
+      <td mat-cell *matCellDef="let user"> {{user.dateOfBirth | date: 'dd/MM/yyyy'}} </td>
+    </ng-container>
+    <ng-container matColumnDef="edit-action">
+      <th mat-header-cell *matHeaderCellDef> Edit </th>
+      <td mat-cell *matCellDef="let user">
+        <button mat-raised-button color="secondary" type="button" (click)="openEditDialog(user)">Edit</button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="delete-action">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let user">
+        <button mat-raised-button color="warn" type="button" (click)="delete(user)">Delete</button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<app-messages></app-messages>

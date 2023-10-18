@@ -1,0 +1,25 @@
+.student-form-container{
+    width: 50vh;
+}
+
+.student-input-field{
+    width: 100%;
+}  
+
+.add-student-btn{
+ width: 10em;
+}
+
+.student-btn-container{
+    display: flex;
+    justify-content: center;
+    justify-items: stretch;
+}
+
+#student-id-input{
+    display:none;
+}
+
+.mat-mdc-dialog-content{
+    max-height: 75vh;
+}

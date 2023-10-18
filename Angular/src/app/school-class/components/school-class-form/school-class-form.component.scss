@@ -1,0 +1,25 @@
+.school-class-form-container{
+    width: 50vh;
+}
+
+.school-class-input-field{
+    width: 100%;
+}  
+
+.add-school-class-btn{
+ width: 10em;
+}
+
+.school-class-btn-container{
+    display: flex;
+    justify-content: center;
+    justify-items: stretch;
+}
+
+#school-class-id-input{
+    display:none;
+}
+
+.mat-mdc-dialog-content{
+    max-height: 75vh;
+}

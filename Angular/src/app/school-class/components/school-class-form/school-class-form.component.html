@@ -1,0 +1,47 @@
+<div class="school-class-form-container">
+    <mat-dialog-content>
+        <header>{{editSchoolClass ? 'Edit entry' : 'Add entry'}}</header>
+        <form [formGroup]="registeredForm">
+            <mat-form-field id="school-class-id-input" class="school-class-input-field">
+                <input matInput class="form-control" formControlName="id">
+            </mat-form-field>
+            <!--Name-->
+            <mat-form-field class="school-class-input-field">
+                <mat-label>Name</mat-label>
+                <input matInput class="form-control" formControlName="name" placeholder="Name...">
+                <mat-error *ngIf="errorHandling('name', 'required')">
+                    You must provide a <strong>name</strong>
+                </mat-error>
+                <mat-error *ngIf="errorHandling('name', 'minlength')">
+                    Name must contain at least <strong>three characters</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Student capacity-->
+            <mat-form-field class="school-class-input-field">
+                <mat-label>Student capacity</mat-label>
+                <input matInput class="form-control" formControlName="studentCapacity"
+                    placeholder="Student capacity...">
+                <mat-error *ngIf="errorHandling('name', 'required')">
+                    You must provide a <strong>student capacity</strong>
+                </mat-error>
+                <mat-error *ngIf="errorHandling('name', 'validatedCapacity')">
+                    Student capacity must be in <strong>digits</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Online-->
+            <section class="school-class-section">
+                <mat-checkbox class="form-control" formControlName="online">Online</mat-checkbox>
+            </section>
+            <div class="school-class-btn-container">
+                <ng-container *ngIf="editSchoolClass; else addBtn">
+                    <button mat-raised-button class="edit-student-btn" color="primary" type="button"
+                        [disabled]="!registeredForm.valid" (click)="onSubmit(false)">Edit</button>
+                </ng-container>
+                <ng-template #addBtn>
+                    <button mat-raised-button class="add-student-btn" color="primary" type="button"
+                        [disabled]="!registeredForm.valid" (click)="onSubmit(true)">Add</button>
+                </ng-template>
+            </div>
+        </form>
+    </mat-dialog-content>
+</div>

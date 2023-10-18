@@ -1,0 +1,71 @@
+<div class = "student-form-container">
+    <mat-dialog-content>
+        <header>{{editStudent ? 'Edit entry' : 'Add entry'}}</header>
+        <form [formGroup]="registeredForm" (ngSubmit)="submitForm()">
+            <div class="form-group">
+                <mat-form-field id="student-id-input" class="student-input-field">
+                    <input matInput #id value="{{editStudent?.id || ''}}">
+                </mat-form-field>
+            </div>
+            <!--
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Name</mat-label>
+                    <input matInput id="name" formControlName="name" class ="form-control" placeholder="Name..." value="{{editStudent?.name || ''}}" required type="text">
+                </mat-form-field>
+            </div>
+            -->
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Name</mat-label>
+                    <!--<input matInput id="name" formControlName="name" [ngClass]= "{'is-invalid':registeredForm.controls.name.errors}" -->
+                    class ="form-control" placeholder="Name..." value="{{editStudent?.name || ''}}" required type="text">
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Surname</mat-label>
+                    <input matInput #surname class ="form-control" placeholder="Surname..." value="{{editStudent?.surname || ''}}">
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Address</mat-label>
+                    <input matInput #address class ="form-control" placeholder="Address..." value="{{editStudent?.address || ''}}">
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Age</mat-label>
+                    <input matInput #age class ="form-control" placeholder="Age..." value="{{editStudent?.age || ''}}">
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Email</mat-label>
+                    <input matInput #email class ="form-control" placeholder="Email..." value="{{editStudent?.email || ''}}">
+                </mat-form-field>
+            </div>
+            <mat-form-field class="student-input-field" appearance="fill">
+                <mat-label>School class</mat-label>
+                <mat-select [(ngModel)]="selectedSchoolClassID" name="schoolClassID">
+                <mat-option *ngFor="let schoolClass of schoolClasses" [value]="schoolClass.id">
+                    {{schoolClass.name}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <!--
+            <div class="student-btn-container">
+                <ng-container *ngIf="editStudent; else addBtn">
+                <button mat-raised-button class="edit-student-btn" color="primary" type="button" 
+                (click)="edit(id.value,name.value,surname.value,address.value,age.value,email.value)">Edit</button>
+                </ng-container>
+                <ng-template #addBtn>
+                <button mat-raised-button class="add-student-btn" color="primary" type="button" 
+                (click)="add(name.value,surname.value,address.value,age.value,email.value)">Add</button>
+                </ng-template>
+            </div>
+        -->
+        </form>
+    </mat-dialog-content>
+</div>

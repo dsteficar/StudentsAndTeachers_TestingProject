@@ -1,0 +1,25 @@
+ .contact-info-form-container{
+    width: 50vh;
+}
+
+.contact-info-input-field{
+    width: 100%;
+}  
+
+.add-contact-info-btn{
+ width: 10em;
+}
+
+.contact-info-btn-container{
+    display: flex;
+    justify-content: center;
+    justify-items: stretch;
+}
+
+#contact-info-id-input{
+    display:none;
+}
+
+.mat-mdc-dialog-content{
+    max-height: 75vh;
+}

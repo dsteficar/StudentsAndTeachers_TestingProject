@@ -1,0 +1,52 @@
+<div class="user-form-container">
+  <mat-dialog-content>
+    <header>{{editUser ? 'Edit entry' : 'Add entry'}}</header>
+    <form [formGroup]="registeredForm">
+      <!--ID-->
+      <mat-form-field id="user-id-input" class="user-input-field">
+        <input matInput class="form-control" formControlName="id">
+      </mat-form-field>
+      <mat-form-field class="user-input-field">
+        <!--Full name-->
+        <mat-label>Full name</mat-label>
+        <input matInput class="form-control" formControlName="fullName" placeholder="Full name...">
+        <mat-error *ngIf="errorHandling('fullName', 'required')">
+          You must provide a <strong>full name</strong>
+        </mat-error>
+        <mat-error *ngIf="errorHandling('fullName', 'validatedFullName')">
+          Full name must contain exactly <strong>two words</strong>
+        </mat-error>
+      </mat-form-field>
+      <!--Number-->
+      <mat-form-field class="user-input-field">
+        <mat-label>Number</mat-label>
+        <input matInput class="form-control" formControlName="number" placeholder="Phone number...">
+        <mat-error *ngIf="errorHandling('number', 'required')">
+          You must provide a <strong>number</strong>
+        </mat-error>
+        <mat-error *ngIf="errorHandling('number', 'maxlength') || errorHandling('number', 'minlength')">
+          Number must have exactly <strong>nine digits</strong>
+        </mat-error>
+      </mat-form-field>
+      <!--Date of birth-->
+      <mat-form-field class="user-input-field">
+        <mat-label>Date of birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker">
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div class="user-btn-container">
+        <ng-container *ngIf="editUser; else addBtn">
+          <button mat-raised-button class="edit-user-btn" color="primary" type="button"
+            [disabled]="!registeredForm.valid" (click)="onSubmit(false)">Edit</button>
+        </ng-container>
+        <ng-template #addBtn>
+          <button mat-raised-button class="add-user-btn" color="primary" type="button"
+            [disabled]="!registeredForm.valid" (click)="onSubmit(true)">Add</button>
+        </ng-template>
+      </div>
+    </form>
+  </mat-dialog-content>
+</div>

@@ -1,0 +1,25 @@
+.teacher-form-container{
+    width: 50vh;
+}
+
+.teacher-input-field{
+    width: 100%;
+}  
+
+.add-teacher-btn{
+ width: 10em;
+}
+
+.teacher-btn-container{
+    display: flex;
+    justify-content: center;
+    justify-items: stretch;
+}
+
+#teacher-id-input{
+    display:none;
+}
+
+.mat-mdc-dialog-content{
+    max-height: 75vh;
+}

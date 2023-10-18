@@ -1,0 +1,84 @@
+<div class="student-form-container">
+    <mat-dialog-content>
+        <header>{{editStudent ? 'Edit entry' : 'Add entry'}}</header>
+        <form [formGroup]="registeredForm">
+            <!--ID-->
+            <mat-form-field id="student-id-input" class="student-input-field">
+                <input matInput class="form-control" formControlName="id">
+            </mat-form-field>
+            <!--Name-->
+            <mat-form-field class="student-input-field">
+                <mat-label>Name</mat-label>
+                <input matInput class="form-control" formControlName="name" placeholder="Name...">
+                <mat-error *ngIf="errorHandling('name', 'required')">
+                    You must provide a <strong>name</strong>
+                </mat-error>
+                <mat-error *ngIf="errorHandling('name', 'minlength')">
+                    Name must contain at least <strong>three characters</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Surname-->
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Surname</mat-label>
+                    <input matInput class="form-control" formControlName="surname" placeholder="Surname...">
+                    <mat-error *ngIf="errorHandling('surname', 'required')">
+                        You must provide a <strong>surname</strong>
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('surname', 'minlength')">
+                        Surname must contain at least <strong>three characters</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <!--Address-->
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Address</mat-label>
+                    <input matInput class="form-control" formControlName="address" placeholder="Address...">
+                    <mat-error *ngIf="errorHandling('surname', 'required')">
+                        You must provide a <strong>surname</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <!--Age-->
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Age</mat-label>
+                    <input matInput class="form-control" formControlName="age" placeholder="Age...">
+                    <mat-error *ngIf="errorHandling('age', 'required')">
+                        You must provide an <strong>age</strong>
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('age', 'validatedAge')">
+                        You must provide an age in <strong>numbers</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <!--Email-->
+            <div class="form-group">
+                <mat-form-field class="student-input-field">
+                    <mat-label>Email</mat-label>
+                    <input matInput class="form-control" formControlName="email" placeholder="Email...">
+                </mat-form-field>
+            </div>
+            <!--School class-->
+            <mat-form-field class="student-input-field" appearance="fill">
+                <mat-label>School class</mat-label>
+                <mat-select formControlName="schoolClass">
+                    <mat-option *ngFor="let schoolClass of schoolClasses" [value]="schoolClass.id">
+                        {{schoolClass.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="student-btn-container">
+                <ng-container *ngIf="editStudent; else addBtn">
+                    <button mat-raised-button class="edit-student-btn" color="primary" type="button"
+                        [disabled]="!registeredForm.valid" (click)="onSubmit(false)">Edit</button>
+                </ng-container>
+                <ng-template #addBtn>
+                    <button mat-raised-button class="add-student-btn" color="primary" type="button"
+                        [disabled]="!registeredForm.valid" (click)="onSubmit(true)">Add</button>
+                </ng-template>
+            </div>
+        </form>
+    </mat-dialog-content>
+</div>

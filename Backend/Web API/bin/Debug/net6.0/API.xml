@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="M:Web_API.Controllers.ContactInfosController.GetContactInfoList">
+            <summary>
+            Shows all contactinfos
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.ContactInfosController.GetContactInfo(System.Int32)">
+            <summary>
+            Shows a specified contactinfo by id
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.ContactInfosController.UpdateContactInfo(System.Int32,Data.Models.ContactInfoDTO)">
+            <summary>
+            Updates the selected contactinfo by id
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT/ContactInfo
+                    {
+                        "id": 0,
+                        "address": "Ulica Bartola Kasica 10",
+                        "email": "profesor1@gmail.com",
+                        "websiteLink": "www.schools.com/profesor1",
+                        "contactNumber": "097456456",
+                        "teacherId": 1
+                    }
+                    
+            </remarks>
+            <response code="204">Returns information that the contactinfo is altered</response>
+            <response code="404">If the contactinfo is not found</response>
+        </member>
+        <member name="M:Web_API.Controllers.ContactInfosController.CreateContactInfo(Data.Models.ContactInfoDTO)">
+            <summary>
+            Creates a new contactinfo
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/ContactInfo
+                    {
+                        "id": 0,
+                        "address": "Ulica Bartola Kasica 10",
+                        "email": "profesor1@gmail.com",
+                        "websiteLink": "www.schools.com/profesor1",
+                        "contactNumber": "097456456",
+                        "cabinetNumber": 4,
+                        "teacherId": 1
+                    }
+                    
+            </remarks>
+            <response code="201">Returns the newly created contactinfo</response>
+            <response code="400">If the contactinfo data is not in correct syntax</response>
+        </member>
+        <member name="M:Web_API.Controllers.ContactInfosController.DeleteContactInfo(System.Int32)">
+            <summary>
+            Deletes the specified contactinfo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <response code="204">Returns confirmation that contactinfo is deleted</response>
+            <response code="404">If the contactinfo is null</response>
+        </member>
+        <member name="M:Web_API.Controllers.SchoolClassesController.GetSchoolClassList">
+            <summary>
+            Shows all schoolclasses
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.SchoolClassesController.GetSchoolClass(System.Int32)">
+            <summary>
+            Shows a specified schoolclass by id
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.SchoolClassesController.UpdateSchoolClass(System.Int32,Data.Models.SchoolClassDTO)">
+            <summary>
+            Updates the selected schoolclass by id
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT/Schoolclasses
+                    {
+                        "id": 0,
+                        "name": "IT Class",
+                        "studentCapacity": 15,
+                        "online": false
+                    }
+                    
+            </remarks>
+            <response code="204">Returns information that the schoolclass is altered</response>
+            <response code="404">If the schoolclass is not found</response>
+        </member>
+        <member name="M:Web_API.Controllers.SchoolClassesController.CreateSchoolClass(Data.Models.SchoolClassDTO)">
+            <summary>
+            Creates a new schoolclass
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/SchoolClass
+                    {
+                        "id": 0,
+                        "name": "IT Class",
+                        "studentCapacity": 15,
+                        "online": false
+                    }
+                    
+            </remarks>
+            <response code="201">Returns the newly created schoolclass</response>
+            <response code="400">If the schoolclass data is not in correct syntax</response>
+        </member>
+        <member name="M:Web_API.Controllers.SchoolClassesController.DeleteSchoolClass(System.Int32)">
+            <summary>
+            Deletes the specified schoolclass
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <response code="204">Returns confirmation that schoolclass is deleted</response>
+            <response code="404">If the schoolclass is null</response>
+        </member>
+        <member name="M:Web_API.Controllers.StudentsController.GetStudentList">
+            <summary>
+            Shows all students
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.StudentsController.GetStudent(System.Int32)">
+            <summary>
+            Shows a specified student by id
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.StudentsController.UpdateStudent(System.Int32,Data.Models.StudentDTO)">
+            <summary>
+            Updates the selected student by id
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT/Student
+                    {
+                        "id": 0,
+                        "name": "Karlo",
+                        "surname": "Karlic",
+                        "address" : "Dravska ulica 5",
+                        "age": 0,
+                        "email": 0,
+                        "schoolClassId": 1
+                    }
+                    
+            </remarks>
+            <response code="204">Returns information that the user is altered</response>
+            <response code="404">If the user is not found</response>
+        </member>
+        <member name="M:Web_API.Controllers.StudentsController.CreateStudent(Data.Models.StudentDTO)">
+            <summary>
+            Creates a new student
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/Student
+                    {
+                        "id": 0,
+                        "name": "Karlo",
+                        "surname": "Karlic",
+                        "address" : "Dravska ulica 5",
+                        "age": "15",
+                        "email": "karlic@gmail.com",
+                        "schoolClassId": 1
+                    }
+                    
+            </remarks>
+            <response code="201">Returns the newly created student</response>
+            <response code="400">If the student data is not in correct syntax</response>
+        </member>
+        <member name="M:Web_API.Controllers.StudentsController.DeleteStudent(System.Int32)">
+            <summary>
+            Deletes the specified student
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <response code="204">Returns confirmation that student is deleted</response>
+            <response code="404">If the student is null</response>
+        </member>
+        <member name="M:Web_API.Controllers.StudentsController.AddTeachersOfStudent(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Creates a new student with his related teachers
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/Student
+                        [
+                            1,4,5
+                        ]
+                    
+            </remarks>
+            <response code="201">Returns the newly created student with all his teachers</response>
+            <response code="400">If the student and teachers data is not in correct syntax</response>
+        </member>
+        <member name="M:Web_API.Controllers.StudentTeachersController.GetStudentTeacherList">
+            <summary>
+            Shows all studentTeachers
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.StudentTeachersController.GetStudentTeacher(System.Int32,System.Int32)">
+            <summary>
+            Shows a specified studentTeacher by id
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.StudentTeachersController.UpdateStudentTeacher(System.Int32,System.Int32,Data.Models.StudentTeacherDTO)">
+            <summary>
+            Updates the selected studentTeacher by id
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT/StudentTeacher
+                    {
+                        "studentId": 1,
+                        "teacherId": 1
+                    }
+                    
+            </remarks>
+            <response code="204">Returns information that the studentTeacher is altered</response>
+            <response code="404">If the studentTeacher is not found</response>
+        </member>
+        <member name="M:Web_API.Controllers.StudentTeachersController.CreateStudentTeacher(Data.Models.StudentTeacherDTO)">
+            <summary>
+            Creates a new studentTeacher
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/StudentTeacher
+                    {
+                        "studentId": 1,
+                        "teacherId": 1
+                    }
+                    
+            </remarks>
+            <response code="201">Returns the newly created studentTeacher</response>
+            <response code="400">If the studentTeacher data is not in correct syntax</response>
+        </member>
+        <member name="M:Web_API.Controllers.StudentTeachersController.DeleteStudentTeacher(System.Int32,System.Int32)">
+            <summary>
+            Deletes the specified studentTeacher
+            </summary>
+            <param name="studentId"></param>
+            <param name="teacherId"></param>
+            <returns></returns>
+            <response code="204">Returns confirmation that studentTeacher is deleted</response>
+            <response code="404">If the studentTeacher is null</response>
+        </member>
+        <member name="M:Web_API.Controllers.TeachersController.GetTeacherList">
+            <summary>
+            Shows all teachers
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.TeachersController.GetTeacher(System.Int32)">
+            <summary>
+            Shows a specified teacher by id
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.TeachersController.UpdateTeacher(System.Int32,Data.Models.TeacherDTO)">
+            <summary>
+            Updates the selected teacher by id
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT/Teacher
+                     "id": 0,
+                     "name": "Marko",
+                     "surname": "Markic",
+                     "yearsOfTeaching": 5,
+                     "salary": 1000,
+                     "associate": true,
+                     "address": "Ulica Stanka Vraza 5"
+                    }
+                    
+            </remarks>
+            <response code="204">Returns information that the teacher is altered</response>
+            <response code="404">If the teachers is not found</response>
+        </member>
+        <member name="M:Web_API.Controllers.TeachersController.CreateTeacher(Data.Models.TeacherDTO)">
+            <summary>
+            Creates a new teacher
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/Teacher
+                    {
+                     "id": 0,
+                     "createdAt": "2023-04-28T04:51:07.443Z",
+                     "name": "Marko",
+                     "surname": "Markic",
+                     "yearsOfTeaching": 5,
+                     "salary": 1000,
+                     "associate": true,
+                     "address": "Ulica Stanka Vraza 5"
+                    }
+                    
+            </remarks>
+            <response code="201">Returns the newly created teacher</response>
+            <response code="400">If the teacher data is not in correct syntax</response>
+        </member>
+        <member name="M:Web_API.Controllers.TeachersController.DeleteTeacher(System.Int32)">
+            <summary>
+            Deletes the specified teacher
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <response code="204">Returns confirmation that teacher is deleted</response>
+            <response code="404">If the teacher is null</response>
+        </member>
+        <member name="M:Web_API.Controllers.UsersController.GetUserList">
+            <summary>
+            Shows all users
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Shows a specified user by id
+            </summary>
+        </member>
+        <member name="M:Web_API.Controllers.UsersController.UpdateUser(System.Int32,Data.Models.UserDTO)">
+            <summary>
+            Updates the selected user by id
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT/User
+                    {
+                    "id" : 1,
+                    "fullname" : "Marko Markic",
+                    "number" : "098123456"
+                    }
+                    
+            </remarks>
+            <response code="204">Returns information that the user is altered</response>
+            <response code="404">If the user is not found</response>
+        </member>
+        <member name="M:Web_API.Controllers.UsersController.CreateUser(Data.Models.UserDTO)">
+            <summary>
+            Creates a new user
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/User
+                    {
+                    "fullname" : "Marko Markic",
+                    "number" : "098123456"
+                    }
+                    
+            </remarks>
+            <response code="201">Returns the newly created user</response>
+            <response code="400">If the user data is not in correct syntax</response>
+        </member>
+        <member name="M:Web_API.Controllers.UsersController.DeleteUser(System.Int32)">
+            <summary>
+            Deletes the specified user
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <response code="204">Returns confirmation that user is deleted</response>
+            <response code="404">If the user is null</response>
+        </member>
+    </members>
+</doc>

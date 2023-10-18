@@ -1,0 +1,13 @@
+<div class="top-heroes-container">
+    <mat-card>
+            <mat-card-title>Top Heroes</mat-card-title>
+            <mat-card-subtitle>All the best heores of the day</mat-card-subtitle>
+        <div class="heroes-menu">
+            <a class ="heores-menu-navigation" mat-raised-button color="300" *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+                <span>{{hero.name}}</span>
+            </a>
+        </div>
+        <app-hero-search></app-hero-search>
+    </mat-card>
+</div>
+<app-messages></app-messages>

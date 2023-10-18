@@ -1,0 +1,21 @@
+.user-input-field{
+    width: 100%;
+}  
+
+.add-user-btn{
+ width: 10em;
+}
+
+.user-btn-container{
+    display: flex;
+    justify-content: center;
+    justify-items: stretch;
+}
+
+#user-id-input{
+    display:none;
+}
+
+.user-form-container{
+    width: 50vh;
+}

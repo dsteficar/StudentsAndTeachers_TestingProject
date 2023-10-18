@@ -1,0 +1,46 @@
+<div class="new-contact-info-btn-container">
+  <button mat-raised-button color="primary" type="button" (click)="openAddDialog()">Add new entry</button>
+</div>
+<div class="contact-infos-table-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let contactInfo"> {{contactInfo.address}} </td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let contactInfo"> {{contactInfo.email}} </td>
+    </ng-container>
+    <ng-container matColumnDef="websiteLink">
+      <th mat-header-cell *matHeaderCellDef> Website link </th>
+      <td mat-cell *matCellDef="let contactInfo"> {{contactInfo.websiteLink}} </td>
+    </ng-container>
+    <ng-container matColumnDef="contactNumber">
+      <th mat-header-cell *matHeaderCellDef> Contact number </th>
+      <td mat-cell *matCellDef="let contactInfo"> {{contactInfo.contactNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="cabinetNumber">
+      <th mat-header-cell *matHeaderCellDef> Cabinet number </th>
+      <td mat-cell *matCellDef="let contactInfo"> {{contactInfo.cabinetNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="teacher">
+      <th mat-header-cell *matHeaderCellDef> Teacher </th>
+      <td mat-cell *matCellDef="let contactInfo"> {{contactInfo.teacherFullname}} </td>
+    </ng-container>
+    <ng-container matColumnDef="edit-action">
+      <th mat-header-cell *matHeaderCellDef> Edit </th>
+      <td mat-cell *matCellDef="let contactInfo">
+        <button mat-raised-button color="secondary" type="button" (click)="openEditDialog(contactInfo)">Edit</button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="delete-action">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let contactInfo">
+        <button mat-raised-button color="warn" type="button" (click)="deleteContactInfo(contactInfo)">Delete</button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<app-messages></app-messages>

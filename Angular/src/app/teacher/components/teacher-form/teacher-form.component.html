@@ -1,0 +1,64 @@
+<div class="teacher-form-container">
+    <mat-dialog-content>
+        <header>{{editTeacher ? 'Edit entry' : 'Add entry'}}</header>
+        <form [formGroup]="registeredForm">
+            <!--ID-->
+            <mat-form-field id="teacher-id-input" class="teacher-input-field">
+                <input matInput class="form-control" formControlName="id">
+            </mat-form-field>
+            <!--Name-->
+            <mat-form-field class="teacher-input-field">
+                <mat-label>Name</mat-label>
+                <input matInput class="form-control" formControlName="name" placeholder="Name...">
+                <mat-error *ngIf="errorHandling('name', 'required')">
+                    You must provide a <strong>name</strong>
+                </mat-error>
+                <mat-error *ngIf="errorHandling('name', 'minlength')">
+                    Name must contain at least <strong>three characters</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Surname-->
+            <mat-form-field class="teacher-input-field">
+                <mat-label>Surname</mat-label>
+                <input matInput class="form-control" formControlName="surname" placeholder="Surname...">
+                <mat-error *ngIf="errorHandling('surname', 'required')">
+                    You must provide a <strong>surname</strong>
+                </mat-error>
+                <mat-error *ngIf="errorHandling('surname', 'minlength')">
+                    Surname must contain at least <strong>three characters</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Years of teaching-->
+            <mat-form-field class="teacher-input-field">
+                <mat-label>Years of teaching</mat-label>
+                <input matInput class="form-control" formControlName="yearsOfTeaching"
+                    placeholder="Years of teaching...">
+                <mat-error *ngIf="errorHandling('yearsOfTeaching', 'validatedYrOfTeaching')">
+                    Years of teaching must contain be a <strong>number</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Salary-->
+            <mat-form-field class="teacher-input-field">
+                <mat-label>Salary</mat-label>
+                <input matInput class="form-control" formControlName="salary" placeholder="Salary...">
+                <mat-error *ngIf="errorHandling('salary', 'validatedSalary')">
+                    Salary must be a <strong>number</strong>
+                </mat-error>
+            </mat-form-field>
+            <!--Associate-->
+            <section class="teacher-section">
+                <mat-checkbox class="form-control" formControlName="associate">Associate</mat-checkbox>
+            </section>
+            <div class="teacher-btn-container">
+                <ng-container *ngIf="editTeacher; else addBtn">
+                    <button mat-raised-button class="edit-student-btn" color="primary" type="button"
+                        [disabled]="!registeredForm.valid" (click)="onSubmit(false)">Edit</button>
+                </ng-container>
+                <ng-template #addBtn>
+                    <button mat-raised-button class="add-student-btn" color="primary" type="button"
+                        [disabled]="!registeredForm.valid" (click)="onSubmit(true)">Add</button>
+                </ng-template>
+            </div>
+        </form>
+    </mat-dialog-content>
+</div>

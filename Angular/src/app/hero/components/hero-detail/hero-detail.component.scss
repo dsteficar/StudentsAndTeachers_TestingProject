@@ -1,0 +1,39 @@
+button {
+  margin-top: -1em;
+  background-color: #eee;
+  margin-left: 0.3em;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #ac0606ab;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+.hero-details-container{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.hero-name-field{
+  width: 80%;
+}
+
+
+.hero-details-id{
+  font-size: 20pt;
+  text-align: center;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: rgba(229, 249, 255, 0.479);
+  color: black;
+  width: 15%;
+  padding: 0.5em;
+  border-style: solid;
+  border-color: rgba(165, 165, 165, 0.322);
+  border-radius: 0.5em;
+}

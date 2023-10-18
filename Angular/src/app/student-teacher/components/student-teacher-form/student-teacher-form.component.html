@@ -1,0 +1,31 @@
+<div class="student-teacher-form-container">
+  <mat-dialog-content>
+    <header>Add new entry</header>
+    <form [formGroup]="registeredForm">
+      <!--Student-->
+      <mat-form-field appearance="fill">
+        <mat-label>Student</mat-label>
+        <mat-select class="form-control" formControlName="studentId">
+          <mat-option *ngFor="let student of students" [value]="student.id">
+            {{student.name + " " + student.surname}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!--Teacher-->
+      <mat-form-field appearance="fill">
+        <mat-label>Teacher</mat-label>
+        <mat-select class="form-control" formControlName="teacherId">
+          <mat-option *ngFor="let teacher of teachers" [value]="teacher.id">
+            {{teacher.name + " " + teacher.surname}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="student-teacher-btn-container">
+        <ng-container #addBtn>
+          <button mat-raised-button class="add-user-btn" color="primary" type="button" (click)="onSubmit()"
+            [disabled]="!registeredForm.valid">Add</button>
+        </ng-container>
+      </div>
+    </form>
+  </mat-dialog-content>
+</div>
